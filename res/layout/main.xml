@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#CCFFCC"
+    android:padding="5dip" >
+
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentLeft="true" >
+            
+            <RadioButton
+                android:id="@+widget/degres"
+        		android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Degrés" />
+
+            <RadioButton
+                android:id="@+widget/radians"
+        		android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Radians" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+checkBox/shift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="SHIFT"
+            android:textColor="#FF9933" />
+    </RelativeLayout>
+    
+    <TextView
+        android:id="@+widget/affichage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#99FFFF"
+        android:textColor="#000000"
+        android:gravity="right"
+        android:typeface="monospace"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:text="0"
+        android:textSize="25dip" />
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TableRow
+            android:layout_width="fill_parent"
+        	android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/common" />
+
+            <TextView
+                style="@style/common"/>
+            <TextView
+                style="@style/common"
+                android:gravity="bottom|center"
+        		android:textColor="#FF9933"
+                android:text="SIN" />
+
+            <TextView
+                style="@style/common" />
+        </TableRow>
+
+        <TableRow
+                style="@style/common" >
+
+            <Button
+                android:id="@+bouton/clear"
+                style="@style/boutonAutre"
+                android:text="C" />
+
+            <Button
+                android:id="@+bouton/arr"
+                style="@style/boutonAutre"
+                android:text="@string/retour" />
+
+            <sdz.tp.calculatrice.TrigoButton
+                android:id="@+bouton/trigo"
+                style="@style/boutonAutre"
+                android:text="COS" />
+
+            <Button
+                android:id="@+bouton/off"
+                style="@style/boutonAutre"
+                android:text="OFF" />
+        </TableRow>
+
+        <TableRow
+                style="@style/common" >
+
+            <sdz.tp.calculatrice.NumberButton
+                android:id="@+number/number1"
+                style="@style/boutonNumero"
+                android:text="1" />
+
+            <sdz.tp.calculatrice.NumberButton
+                android:id="@+number/number2"
+                style="@style/boutonNumero"
+                android:text="2" />
+
+            <sdz.tp.calculatrice.NumberButton
+                android:id="@+number/number3"
+                style="@style/boutonNumero"
+                android:text="3" />
+
+            <sdz.tp.calculatrice.OperateurButton
+                android:id="@+bouton/add"
+                style="@style/boutonAutre"
+                android:text="+" />
+        </TableRow>
+
+        <TableRow
+                style="@style/common" >
+
+            <sdz.tp.calculatrice.NumberButton
+                android:id="@+number/number4"
+                style="@style/boutonNumero"
+                android:text="4" />
+
+            <sdz.tp.calculatrice.NumberButton
+                android:id="@+number/number5"
+                style="@style/boutonNumero"
+                android:text="5" />
+
+            <sdz.tp.calculatrice.NumberButton
+                android:id="@+number/number6"
+                style="@style/boutonNumero"
+                android:text="6" />
+
+            <sdz.tp.calculatrice.OperateurButton
+                android:id="@+bouton/sou"
+                style="@style/boutonAutre"
+                android:text="-" />
+        </TableRow>
+        
+        <TableRow
+                style="@style/common" >
+
+            <sdz.tp.calculatrice.NumberButton
+                android:id="@+number/number7"
+                style="@style/boutonNumero"
+                android:text="7" />
+
+            <sdz.tp.calculatrice.NumberButton
+                android:id="@+number/number8"
+                style="@style/boutonNumero"
+                android:text="8" />
+
+            <sdz.tp.calculatrice.NumberButton
+                android:id="@+number/number9"
+                style="@style/boutonNumero"
+                android:text="9" />
+
+            <sdz.tp.calculatrice.OperateurButton
+                android:id="@+bouton/mul"
+                style="@style/boutonAutre"
+                android:text="*" />
+        </TableRow>
+
+        <TableRow
+                style="@style/common" >
+
+            <Button
+                android:id="@+bouton/point"
+                style="@style/boutonAutre"
+                android:text="." />
+
+            <sdz.tp.calculatrice.NumberButton
+                android:id="@+number/number0"
+                style="@style/boutonNumero"
+                android:text="0" />
+
+            <Button
+                android:id="@+bouton/signChange"
+                style="@style/boutonAutre"
+                android:text="+/-" />
+
+            <sdz.tp.calculatrice.OperateurButton
+                android:id="@+bouton/div"
+                style="@style/boutonAutre"
+                android:text="/" />
+        </TableRow>
+
+	    <Button
+	        android:id="@+bouton/boutonEgal"
+            style="@style/boutonAutre"
+            android:layout_height="wrap_content"
+	        android:text="=" />
+    </TableLayout>
+
+</LinearLayout>
